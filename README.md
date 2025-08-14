@@ -138,11 +138,20 @@ aws cloudfront create-invalidation \
 
 When you no longer need the site, destroy resources to avoid costs:
 ```bash
+cd aws-static-website-terraform/infrastructure
+
 terraform destroy
 ```
 
+2. Run the destroy command to delete all AWS resources:
+
 Type `yes` to confirm.
 
+> **Note:** Some AWS resources incur ongoing costs while active, such as:
+> - S3 bucket storage and requests
+> - CloudFront data transfer and requests
+> - CloudWatch log storage and API calls  
+> Be sure to destroy unused resources promptly to avoid unexpected charges.
 ---
 
 ## 📌 Notes
