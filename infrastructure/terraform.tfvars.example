@@ -1,0 +1,7 @@
+# Copy this file to terraform.tfvars and customize values
+aws_region     = "2"
+environment    = "dev"
+project_name   = "my-static-website"
+domain_name    = ""  # Leave empty for CloudFront domain or add your custom domain
+enable_logging = true
+price_class    = "PriceClass_100"  # US, Canada, Europe

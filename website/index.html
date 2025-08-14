@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS Static Website - Terraform Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1><i class="fas fa-cloud"></i> AWS Terraform Demo</h1>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#architecture">Architecture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Infrastructure as Code with Terraform</h2>
+                <p>A production-ready static website hosted on AWS using best practices for security, performance, and reliability.</p>
+                <div class="cta-buttons">
+                    <a href="#features" class="btn primary">Explore Features</a>
+                    <a href="https://github.com/trip25/aws-terraform" class="btn secondary">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h3>Key Features</h3>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h4>Infrastructure as Code</h4>
+                        <p>Complete infrastructure defined in Terraform with version control and repeatability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Security Best Practices</h4>
+                        <p>S3 bucket encryption, CloudFront OAC, and proper IAM policies implemented.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Performance Optimised</h4>
+                        <p>Global CDN with caching, compression, and HTTP/2 support.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Monitoring & Alerting</h4>
+                        <p>CloudWatch metrics and alarms for proactive monitoring.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h4>Cost Optimised</h4>
+                        <p>Efficient resource usage with appropriate pricing tiers.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-rocket"></i>
+                        <h4>CI/CD Ready</h4>
+                        <p>GitHub Actions workflow for automated testing and deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="architecture">
+            <div class="container">
+                <h3>Architecture Overview</h3>
+                <div class="arch-diagram">
+                    <div class="arch-step">
+                        <i class="fas fa-user"></i>
+                        <p>User Request</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-step">
+                        <i class="fas fa-globe"></i>
+                        <p>Route53 DNS</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-step">
+                        <i class="fas fa-network-wired"></i>
+                        <p>CloudFront CDN</p>
+                    </div>
+                    <div class="arch-arrow">→</div>
+                    <div class="arch-step">
+                        <i class="fas fa-database"></i>
+                        <p>S3 Bucket</p>
+                    </div>
+                </div>
+                <div class="tech-stack">
+                    <h4>Technology Stack</h4>
+                    <div class="tech-items">
+                        <span class="tech-item">AWS S3</span>
+                        <span class="tech-item">CloudFront</span>
+                        <span class="tech-item">Route53</span>
+                        <span class="tech-item">Terraform</span>
+                        <span class="tech-item">GitHub Actions</span>
+                        <span class="tech-item">CloudWatch</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <p>&copy; 2025 AWS Terraform Demo. Built with ❤️ for learning Infrastructure as Code.</p>
+            <div class="footer-links">
+                <a href="https://github.com/Trip25" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/tripti-g-294089a6/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Display deployment info
+        const deploymentInfo = {
+            timestamp: new Date().toISOString(),
+            version: '1.0.0',
+            environment: 'production'
+        };
+        console.log('Deployment Info:', deploymentInfo);
+    </script>
+</body>
+</html>
